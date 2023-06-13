@@ -52,13 +52,16 @@
       <tbody>
         <% @club.players.each do |player| %>
           <tr>
-            <td><%= "#{player.firstname} #{player.lastname}" %></td>
+            <td><%= player.full_name %></td>
             <td><%= player.position %></td>
             <td><%= player.country %></td>
             <td><%= player.age %></td>
             <td><%= player.birthday %></td>
           </tr>
         <% end %>
+        <tr>
+          <td colspan="5">Players Average Age: <%= @players_average_age %></td>
+        </tr>
       </tbody>
     </table>
   </p>
